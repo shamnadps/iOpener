@@ -69,8 +69,27 @@
 	window.location = "index.html";	
 	}
 	function showpdf() {
-	window.open('IOpener8.pdf', '_system');
+	var name=device.name ;
+    var plat=device.platform;
+	
+	var filePath = getPhoneGapPath() ;
+	
+	if(plat == "iOS") {
+	 newPath = getPhoneGapPath() + 'IOpener8.pdf';
+	} else {
+		newPath = 'file://' +getPhoneGapPath() + 'IOpener8.pdf';
 	}
+	alert(getPhoneGapPath());
+	alert(newPath);
+	//cordova.plugins.disusered.open('IOpener8.pdf', function(){}, function({});
+	window.open(newPath, '_blank');
+	}
+	
+	function getPhoneGapPath() {
+   var path = window.location.pathname;
+   path = path.substr( path, path.length - 12 );
+   return path;
+};
 	
   </script>  
 </body>
