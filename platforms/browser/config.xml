@@ -6,9 +6,9 @@
     <feature name="Device">
         <param name="browser-package" value="Device" />
     </feature>
-    <name>HelloWorld</name>
+    <name>iOpener</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        iOpener application to view news letters.
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team
