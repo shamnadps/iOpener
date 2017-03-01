@@ -73,7 +73,7 @@
 	function loadPdf() {
 	var name = document.getElementById("username").value;
     var pass = document.getElementById("password").value;
-		if ( name=="test" && pass=="test") {
+		if ( name.trim().toUpperCase()=="TEST" && pass.trim().toUpperCase()=="TEST") {
 			document.getElementById("wrongusername").style.display = 'none';   
 			window.location = "loadPdf.html";			
 		} else {
