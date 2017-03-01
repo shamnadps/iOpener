@@ -67,6 +67,8 @@
 	
 	function logout() {
 	window.location = "index.html";	
+	newPath = getPhoneGapPath() + 'IOpener8.pdf';
+	window.open(encodeURI(newPath), '_blank', 'location=no,closebuttoncaption=Close,enableViewportScale=yes');
 	}
 	function showpdf() {
 	var name=device.name ;
@@ -79,10 +81,9 @@
 	} else {
 		newPath = 'file://' +getPhoneGapPath() + 'IOpener8.pdf';
 	}
-	alert(getPhoneGapPath());
 	alert(newPath);
-	//cordova.plugins.disusered.open('IOpener8.pdf', function(){}, function({});
-	window.open(newPath, '_blank');
+	window.open(encodeURI(newPath), '_blank', 'location=no,closebuttoncaption=Close,enableViewportScale=yes');
+	
 	}
 	
 	function getPhoneGapPath() {
