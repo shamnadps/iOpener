@@ -1,0 +1,37 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-document-viewer": {
+            "PACKAGE_NAME": "iOpener"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "cordova-plugin-document-viewer.SitewaertsDocumentViewer",
+            "file": "plugins/cordova-plugin-document-viewer/www/sitewaertsdocumentviewer.js",
+            "pluginId": "cordova-plugin-document-viewer",
+            "clobbers": [
+                "cordova.plugins.SitewaertsDocumentViewer",
+                "SitewaertsDocumentViewer"
+            ]
+        },
+        {
+            "id": "cordova-plugin-document-viewer.SitewaertsDocumentViewerProxy",
+            "file": "plugins/cordova-plugin-document-viewer/src/windows/sitewaertsdocumentviewerProxy_native.js",
+            "pluginId": "cordova-plugin-document-viewer",
+            "merges": [
+                ""
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-document-viewer": "0.8.0"
+    }
+}

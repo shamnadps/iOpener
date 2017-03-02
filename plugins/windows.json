@@ -1,0 +1,15 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-document-viewer": {
+            "PACKAGE_NAME": "iOpener"
+        }
+    },
+    "dependent_plugins": {}
+}

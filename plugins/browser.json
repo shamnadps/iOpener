@@ -63,6 +63,15 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "com.kernix.pdfviewer": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-document-viewer": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "pspdfkit-cordova-android": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
     "dependent_plugins": {

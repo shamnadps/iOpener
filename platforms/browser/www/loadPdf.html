@@ -46,7 +46,7 @@
 </head>
 
 <body>
-<input type="button" id="logout" value="logout" onclick="logout();" style="float:right;margin-right:2%;margin-top:2%;width:80px;height:40px;font-size:16px;color:#21618C "></input>
+<input type="button" id="logout" value="logout" onclick="logout();" style="float:right;margin-right:2%;margin-top:10%;width:80px;height:40px;font-size:16px;color:#21618C "></input>
     <div class="app">
         <span style="font-size:2em;">iOpener <br> News Letter</span><br><br>
 		<div id="logindiv">
@@ -67,30 +67,72 @@
 	
 	function logout() {
 	window.location = "index.html";	
-	newPath = getPhoneGapPath() + 'IOpener8.pdf';
-	window.open(encodeURI(newPath), '_blank', 'location=no,closebuttoncaption=Close,enableViewportScale=yes');
 	}
 	function showpdf() {
-	var name=device.name ;
-    var plat=device.platform;
+	//cordova.plugins.disusered.open('IOpener8.pdf', function(){}, function({});
+	alert("Entered");
+	var url = "IOpener8.pdf";
+	alert("Entered2");
+	var contentType = 'application/pdf'
+	alert("Entered3");
+	cordova.plugins.SitewaertsDocumentViewer.canViewDocument(url, contentType, options, onPossible, onMissingApp, onImpossible, onError);
+	alert("Entered4");
 	
-	var filePath = getPhoneGapPath() ;
 	
-	if(plat == "iOS") {
-	 newPath = getPhoneGapPath() + 'IOpener8.pdf';
-	} else {
-		newPath = 'file://' +getPhoneGapPath() + 'IOpener8.pdf';
-	}
-	alert(newPath);
-	window.open(encodeURI(newPath), '_blank', 'location=no,closebuttoncaption=Close,enableViewportScale=yes');
-	
+	//window.open('IOpener8.pdf', '_blank', 'location=no,closebuttoncaption=Close,enableViewportScale=yes');
 	}
 	
-	function getPhoneGapPath() {
-   var path = window.location.pathname;
-   path = path.substr( path, path.length - 12 );
-   return path;
-};
+	
+	var options = {
+    title: STRING,
+    documentView : {
+        closeLabel : STRING
+    },
+    navigationView : {
+        closeLabel : STRING
+    },
+    email : {
+        enabled : BOOLEAN
+    },
+    print : {
+        enabled : BOOLEAN
+    },
+    openWith : {
+        enabled : BOOLEAN
+    },
+    bookmarks : {
+        enabled : BOOLEAN
+    },
+    search : {
+        enabled : BOOLEAN
+    }
+}
+
+
+	
+	function onPossible(){
+  alert('document can be shown');
+  //e.g. track document usage
+}
+
+function onMissingApp(appId, installer)
+{
+    if(confirm("Do you want to install the free PDF Viewer App "
+            + appId + " for Android?"))
+    {
+        installer();
+    }
+}
+
+function onImpossible(){
+  alert('document cannot be shown');
+  //e.g. track document usage
+}
+
+function onError(error){
+  alert(error);
+  alert("Sorry! Cannot show document.");
+}
 	
   </script>  
 </body>

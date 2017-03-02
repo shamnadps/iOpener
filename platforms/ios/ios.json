@@ -1,0 +1,52 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"SitewaertsDocumentViewer\"><param name=\"ios-package\" value=\"SitewaertsDocumentViewer\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-document-viewer": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "pspdfkit-cordova-android": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "cordova-plugin-document-viewer.SitewaertsDocumentViewer",
+            "file": "plugins/cordova-plugin-document-viewer/www/sitewaertsdocumentviewer.js",
+            "pluginId": "cordova-plugin-document-viewer",
+            "clobbers": [
+                "cordova.plugins.SitewaertsDocumentViewer",
+                "SitewaertsDocumentViewer"
+            ]
+        },
+        {
+            "id": "pspdfkit-cordova-android.PSPDFKit",
+            "file": "plugins/pspdfkit-cordova-android/www/PSPDFKit.js",
+            "pluginId": "pspdfkit-cordova-android",
+            "clobbers": [
+                "PSPDFKit"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-document-viewer": "0.8.0",
+        "pspdfkit-cordova-android": "2.7.0"
+    }
+}

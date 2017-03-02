@@ -1,0 +1,50 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"SitewaertsDocumentViewer\"><param name=\"android-package\" value=\"de.sitewaerts.cordova.documentviewer.DocumentViewerPlugin\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-document-viewer": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "cordova-plugin-document-viewer.SitewaertsDocumentViewer",
+            "file": "plugins/cordova-plugin-document-viewer/www/sitewaertsdocumentviewer.js",
+            "pluginId": "cordova-plugin-document-viewer",
+            "clobbers": [
+                "cordova.plugins.SitewaertsDocumentViewer",
+                "SitewaertsDocumentViewer"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-document-viewer": "0.8.0"
+    }
+}
