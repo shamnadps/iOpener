@@ -9,6 +9,9 @@
     "installed_plugins": {
         "cordova-plugin-document-viewer": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-file-opener2": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
     "dependent_plugins": {}

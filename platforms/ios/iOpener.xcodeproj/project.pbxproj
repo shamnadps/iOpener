@@ -77,6 +77,7 @@
 		67E4ECD2444E4A32AC69BAED /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E0D69D836B4432BE0EDF5D /* QuartzCore.framework */; };
 		8EE5C5C022184EB98E41C4B3 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B747F6CF6A14AADBF10A51D /* ImageIO.framework */; };
 		92AEBEC036EB466B8DA02A53 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35942AC7B2864C989CC54428 /* MessageUI.framework */; };
+		E15E364FA4C748ACA6314EE8 /* FileOpener2.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B33E7DEBA34370895E2AB4 /* FileOpener2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +210,8 @@
 		28E0D69D836B4432BE0EDF5D /* QuartzCore.framework */ = {isa = PBXFileReference; name = "QuartzCore.framework"; path = "System/Library/Frameworks/QuartzCore.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		8B747F6CF6A14AADBF10A51D /* ImageIO.framework */ = {isa = PBXFileReference; name = "ImageIO.framework"; path = "System/Library/Frameworks/ImageIO.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		35942AC7B2864C989CC54428 /* MessageUI.framework */ = {isa = PBXFileReference; name = "MessageUI.framework"; path = "System/Library/Frameworks/MessageUI.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		B8B33E7DEBA34370895E2AB4 /* FileOpener2.m */ = {isa = PBXFileReference; name = "FileOpener2.m"; path = "cordova-plugin-file-opener2/FileOpener2.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		F012EB7840C445ABA5A63EE7 /* FileOpener2.h */ = {isa = PBXFileReference; name = "FileOpener2.h"; path = "cordova-plugin-file-opener2/FileOpener2.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -409,6 +412,8 @@
 				4F747B651C004DB1B27E7312 /* ThumbsViewController.h */,
 				15864C170C65467E852C1F54 /* ThumbsViewController+SDVThumbsViewControllerPassThrough.h */,
 				D6792AFA99184416BD8ED96F /* UIXToolbarView.h */,
+				B8B33E7DEBA34370895E2AB4 /* FileOpener2.m */,
+				F012EB7840C445ABA5A63EE7 /* FileOpener2.h */,
 			);
 			name = Plugins;
 			path = "iOpener/Plugins";
@@ -577,6 +582,7 @@
 				4DDBA8AE39E840B98AFD7C75 /* ThumbsViewController.m in Sources */,
 				8EF12C19FEDD46F782B29637 /* ThumbsViewController+SDVThumbsViewControllerPassThrough.m in Sources */,
 				0390CFBFBD9F457B9459C5A4 /* UIXToolbarView.m in Sources */,
+				E15E364FA4C748ACA6314EE8 /* FileOpener2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

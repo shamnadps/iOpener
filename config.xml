@@ -117,4 +117,5 @@
     <plugin name="cordova-plugin-document-viewer" spec="https://github.com/sitewaerts/cordova-plugin-document-viewer.git" />
     <plugin name="com.kernix.pdfviewer" spec="https://github.com/pebois/phonegap-plugin-PDFViewer.git" />
     <plugin name="ch.ti8m.documenthandler" spec="https://github.com/ti8m/DocumentHandler.git" />
+    <plugin name="cordova-plugin-file-opener2" spec="~2.0.8" />
 </widget>

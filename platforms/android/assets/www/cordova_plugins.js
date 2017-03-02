@@ -8,12 +8,21 @@ module.exports = [
             "cordova.plugins.SitewaertsDocumentViewer",
             "SitewaertsDocumentViewer"
         ]
+    },
+    {
+        "id": "cordova-plugin-file-opener2.FileOpener2",
+        "file": "plugins/cordova-plugin-file-opener2/www/plugins.FileOpener2.js",
+        "pluginId": "cordova-plugin-file-opener2",
+        "clobbers": [
+            "cordova.plugins.fileOpener2"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "cordova-plugin-document-viewer": "0.8.0"
+    "cordova-plugin-document-viewer": "0.8.0",
+    "cordova-plugin-file-opener2": "2.0.8"
 };
 // BOTTOM OF METADATA
 });

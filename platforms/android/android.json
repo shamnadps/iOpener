@@ -11,6 +11,10 @@
                         {
                             "xml": "<feature name=\"SitewaertsDocumentViewer\"><param name=\"android-package\" value=\"de.sitewaerts.cordova.documentviewer.DocumentViewerPlugin\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FileOpener2\"><param name=\"android-package\" value=\"io.github.pwlin.cordova.plugins.fileopener2.FileOpener2\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -20,6 +24,12 @@
                     "/*": [
                         {
                             "xml": "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" />",
+                            "count": 2
+                        }
+                    ],
+                    "/manifest/application": [
+                        {
+                            "xml": "<provider android:authorities=\"com.phonegap.helloworld.opener.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"io.github.pwlin.cordova.plugins.fileopener2.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/opener_paths\" /></provider>",
                             "count": 1
                         }
                     ]
@@ -29,6 +39,9 @@
     },
     "installed_plugins": {
         "cordova-plugin-document-viewer": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-file-opener2": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
@@ -42,9 +55,18 @@
                 "cordova.plugins.SitewaertsDocumentViewer",
                 "SitewaertsDocumentViewer"
             ]
+        },
+        {
+            "id": "cordova-plugin-file-opener2.FileOpener2",
+            "file": "plugins/cordova-plugin-file-opener2/www/plugins.FileOpener2.js",
+            "pluginId": "cordova-plugin-file-opener2",
+            "clobbers": [
+                "cordova.plugins.fileOpener2"
+            ]
         }
     ],
     "plugin_metadata": {
-        "cordova-plugin-document-viewer": "0.8.0"
+        "cordova-plugin-document-viewer": "0.8.0",
+        "cordova-plugin-file-opener2": "2.0.8"
     }
 }

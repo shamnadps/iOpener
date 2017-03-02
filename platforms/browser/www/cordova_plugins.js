@@ -619,6 +619,30 @@ module.exports = [
             "cordova.plugins.SitewaertsDocumentViewer",
             "SitewaertsDocumentViewer"
         ]
+    },
+    {
+        "file": "plugins/pspdfkit-cordova-android/www/PSPDFKit.js",
+        "id": "pspdfkit-cordova-android.PSPDFKit",
+        "pluginId": "pspdfkit-cordova-android",
+        "clobbers": [
+            "PSPDFKit"
+        ]
+    },
+    {
+        "file": "plugins/ch.ti8m.documenthandler/www/DocumentHandler.js",
+        "id": "ch.ti8m.documenthandler.DocumentHandler",
+        "pluginId": "ch.ti8m.documenthandler",
+        "clobbers": [
+            "handleDocumentWithURL"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-file-opener2/www/plugins.FileOpener2.js",
+        "id": "cordova-plugin-file-opener2.FileOpener2",
+        "pluginId": "cordova-plugin-file-opener2",
+        "clobbers": [
+            "cordova.plugins.fileOpener2"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -646,7 +670,10 @@ module.exports.metadata =
     "cordova-plugin-vibration": "2.1.3",
     "cordova-plugin-whitelist": "1.2.2",
     "com.kernix.pdfviewer": "1.1.0",
-    "cordova-plugin-document-viewer": "0.8.0"
+    "cordova-plugin-document-viewer": "0.8.0",
+    "pspdfkit-cordova-android": "2.7.0",
+    "ch.ti8m.documenthandler": "0.2.2",
+    "cordova-plugin-file-opener2": "2.0.8"
 }
 // BOTTOM OF METADATA
 });
