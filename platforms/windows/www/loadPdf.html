@@ -46,7 +46,7 @@
 </head>
 
 <body>
-<input type="button" id="logout" value="logout" onclick="logout();" style="float:right;margin-right:2%;margin-top:10%;width:80px;height:40px;font-size:16px;color:#21618C "></input>
+<input type="button" id="logout" value="logout" onclick="logout();" style="float:right;margin-right:2%;margin-top:9%;width:80px;height:40px;font-size:16px;color:#21618C "></input>
     <div class="app">
         <span style="font-size:2em;">iOpener <br> News Letter</span><br><br>
 		<div id="logindiv">
@@ -69,10 +69,8 @@
 	window.location = "index.html";	
 	}
 	function showpdf() {
-	alert("show");
 	//cordova.plugins.disusered.open('IOpener8.pdf', function(){}, function({});
 	var devicePlatform = device.platform;
-	alert(devicePlatform);
 	if(devicePlatform == 'iOS') {
 		loadPDF3iOS();
 	} else if (devicePlatform == 'Android') {
