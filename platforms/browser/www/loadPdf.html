@@ -42,8 +42,6 @@
 	<link rel="stylesheet" href="themes/imperialsoft.min.css" />
 	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
-
-
     <title>iOpener -News Letter</title>
 </head>
 
@@ -53,13 +51,12 @@
         <span style="font-size:2em;">iOpener <br> News Letter</span><br><br>
 		<div id="logindiv">
 			
-			<a href="pdfs/IOpener8.pdf" id="embedURL"><input type="button" id="showpdf" value="Show NewsLetter" style="width:180px;height:50px;font-size:16px;color:#21618C "></input></a>
+			<input type="button" id="showpdf" value="Show NewsLetter" onclick="showpdf();" style="width:180px;height:50px;font-size:16px;color:#21618C "></input>
 			
 			
 		</div>
 		<span id="wrongusername" style="display:none;padding:10px;border: 1px solid red;border-radius: 2px;background-color:#F5B7B1;">Unable to load newsletter. <br>Please try again.</span>
     </div>
-
 	
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
@@ -73,20 +70,10 @@
 	}
 	function showpdf() {
 	//cordova.plugins.disusered.open('IOpener8.pdf', function(){}, function({});
-	alert("Hello");
-	handleDocumentWithURL(
-  function() {console.log('success');},
-  function(error) {
-    alert(error);
-    if(error == 53) {
-      alert('No app that handles this file type.');
-    }
-  }, 
-  'IOpener8.pdf'
-);
+
 	
 	
-	//window.open('IOpener8.pdf', '_blank', 'location=no,closebuttoncaption=Close,enableViewportScale=yes');
+	window.open('https://www.jlpt.jp/e/reference/pdf/guidebook_s_e.pdf', '_blank', 'location=no,closebuttoncaption=Close,enableViewportScale=yes');
 	}
 	
 	
