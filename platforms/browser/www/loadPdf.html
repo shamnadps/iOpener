@@ -71,9 +71,11 @@
 	function showpdf() {
 	//cordova.plugins.disusered.open('IOpener8.pdf', function(){}, function({});
 
+	window.open = cordova.InAppBrowser.open;
+	link = "http://docs.google.com/viewer?url=" +  encodeURIComponent('https://www.jlpt.jp/e/reference/pdf/guidebook_s_e.pdf') + "&embedded=true";
+	alert(link);
+	window.open(link, '_blank', 'location=yes');
 	
-	
-	window.open('https://www.jlpt.jp/e/reference/pdf/guidebook_s_e.pdf', '_blank', 'location=no,closebuttoncaption=Close,enableViewportScale=yes');
 	}
 	
 	
