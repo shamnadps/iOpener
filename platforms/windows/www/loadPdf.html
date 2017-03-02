@@ -71,12 +71,45 @@
 	function showpdf() {
 	//cordova.plugins.disusered.open('IOpener8.pdf', function(){}, function({});
 
-	window.open = cordova.InAppBrowser.open;
-	link = "http://docs.google.com/viewer?url=https://www.jlpt.jp/e/reference/pdf/guidebook_s_e.pdf&embedded=true";
-	alert(link);
-	window.open(link, '_blank', 'location=yes');
-	
+	loadfileandroid();
 	}
+	
+	function loadPDF3iOS() {
+    alert('loadPDF34');
+    alert(cordova.file.applicationDirectory);
+    cordova.plugins.fileOpener2.open(
+        cordova.file.applicationDirectory+'www/iopener.pdf',
+        'application/pdf', 
+        { 
+            error : function(e) { 
+			alert("error");
+                alert('Error status: ' + e.status + ' - Error message: ' + e.message);
+            },
+            success : function () {
+                alert('file opened successfully');                
+            }
+        }
+    );
+	}
+	
+	function loadfileandroid() {
+	window.resolveLocalFileSystemURL(cordova.file.applicationDirectory +  'www/assets/iopener.pdf', function(fileEntry) {
+    window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, function(dirEntry) {
+        fileEntry.copyTo(dirEntry, 'iopener.pdf', function(newFileEntry) {
+            cordova.plugins.fileOpener2.open(newFileEntry.nativeURL,'application/pdf',
+            { 
+                error : function(e) { 
+                    alert('Error status: ' + e.status + ' - Error message: ' + e.message);
+                },
+                success : function () {
+                    alert('file opened successfully');                
+                }
+            }
+            );
+        });
+    });
+	});
+}
 	
 	
 	var options = {
