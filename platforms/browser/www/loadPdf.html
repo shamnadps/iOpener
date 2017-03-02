@@ -69,25 +69,28 @@
 	window.location = "index.html";	
 	}
 	function showpdf() {
+	alert("show");
 	//cordova.plugins.disusered.open('IOpener8.pdf', function(){}, function({});
-
-	loadfileandroid();
+	var devicePlatform = device.platform;
+	alert(devicePlatform);
+	if(devicePlatform == 'iOS') {
+		loadPDF3iOS();
+	} else if (devicePlatform == 'Android') {
+		loadfileandroid();
+	} else {
+	}
 	}
 	
 	function loadPDF3iOS() {
-    alert('loadPDF34');
-    alert(cordova.file.applicationDirectory);
-    cordova.plugins.fileOpener2.open(
-        cordova.file.applicationDirectory+'www/iopener.pdf',
-        'application/pdf', 
+    
+	var path = cordova.file.dataDirectory+  'www/assets/iopener.pdf'
+    cordova.plugins.fileOpener2.open(path,'application/pdf', 
         { 
             error : function(e) { 
-			alert("error");
-                alert('Error status: ' + e.status + ' - Error message: ' + e.message);
-            },
-            success : function () {
-                alert('file opened successfully');                
-            }
+                    alert('Error status: ' + e.status + ' - Error message: ' + e.message);
+                },
+                success : function () {           
+                }
         }
     );
 	}
@@ -101,15 +104,14 @@
                 error : function(e) { 
                     alert('Error status: ' + e.status + ' - Error message: ' + e.message);
                 },
-                success : function () {
-                    alert('file opened successfully');                
+                success : function () {           
                 }
             }
             );
         });
     });
 	});
-}
+	}
 	
 	
 	var options = {
