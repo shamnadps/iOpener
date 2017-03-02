@@ -69,9 +69,6 @@
         },
         "cordova-plugin-document-viewer": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "pspdfkit-cordova-android": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
     "dependent_plugins": {
