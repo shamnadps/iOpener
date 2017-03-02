@@ -114,7 +114,8 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <plugin name="com.kernix.pdfviewer" spec="https://github.com/pebois/phonegap-plugin-PDFViewer.git" />
     <plugin name="pspdfkit-cordova-android" spec="https://github.com/PSPDFKit/Cordova-Android.git" />
     <plugin name="cordova-plugin-document-viewer" spec="https://github.com/sitewaerts/cordova-plugin-document-viewer.git" />
+    <plugin name="com.kernix.pdfviewer" spec="https://github.com/pebois/phonegap-plugin-PDFViewer.git" />
+    <plugin name="ch.ti8m.documenthandler" spec="https://github.com/ti8m/DocumentHandler.git" />
 </widget>
